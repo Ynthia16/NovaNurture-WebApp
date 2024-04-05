@@ -10,8 +10,10 @@ import Testimonies from "./Testimonies";
 import FAQ from "./FAQ";
 import Footer from "../../components/Footer";
 import Gallery from "./Gallery";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div
@@ -22,11 +24,11 @@ const LandingPage = () => {
         <div className="flex justify-between items-center py-8">
           <div className="flex gap-4 items-center ">
             <img src={Logo} alt="Not Found" className="w-12 h-12" />
-            <h3 className="font-semibold text-2xl">NovaNature</h3>
+            <h3 className="font-semibold text-2xl">NovaNurture</h3>
           </div>
 
           {/* Navmenu */}
-          <div className="flex gap-8">
+          <div className="flex gap-8 ">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#gallery">Gallery</a>
@@ -47,13 +49,20 @@ const LandingPage = () => {
               <span className="text-secondaryLight">Mental Health</span>
             </h1>
             <p className="w-5/6 text-base">
-              Lorem ipsum dolor sit amet consectetur. Convallis est urna
-              adipiscing fringilla nulla diam lorem non mauris. Ultrices aliquet
-              at quam.
+              Welcome to NovaNurture – your source for inspiration, empowerment, and positivity. Join our vibrant community for growth, support, and wellness.
+              Explore affirmations, self-care, and more on your journey of reflection and mindfulness. Start transforming with us today!
             </p>
-            <div className="flex justify-between">
-              <Button title={"Register"} styles="bg-secondaryDark w-2/5" />
-              <Button title={"Login"} styles="bg-secondaryDark w-2/5" />
+            <div className="flex justify-start gap-6">
+              <Button
+                title={"Register"}
+                styles="bg-secondaryDark w-2/5"
+                onClick={() => navigate("/signup")}
+              />
+              <Button
+                title={"Login"}
+                styles="bg-secondaryDark w-2/5"
+                onClick={() => navigate("/login")}
+              />
             </div>
           </div>
           <img src={Doctor} alt="Doctor" />

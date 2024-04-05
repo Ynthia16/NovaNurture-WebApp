@@ -11,7 +11,7 @@ function Home() {
       <div className="flex justify-between items-center py-8">
         <div className="flex gap-4 items-center ">
           <img src={Logo} alt="Not Found" className="w-12 h-12" />
-          <h3 className="font-semibold text-2xl">NovaNarture</h3>
+          <h3 className="font-semibold text-2xl">NovaNurture</h3>
         </div>
 
         {/* Navmenu */}
